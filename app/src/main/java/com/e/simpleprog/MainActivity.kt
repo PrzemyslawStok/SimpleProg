@@ -16,12 +16,13 @@ class MainActivity : AppCompatActivity() {
         text_hello.setText(""+no)
 
         button.setOnClickListener{
-            no++
+            no=0
             text_hello.setText("${no}")
         }
 
         background.setOnClickListener{
-
+            no++
+            text_hello.setText("${no}")
         }
     }
 }
