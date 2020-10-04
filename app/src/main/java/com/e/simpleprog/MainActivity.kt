@@ -19,5 +19,9 @@ class MainActivity : AppCompatActivity() {
             no++
             text_hello.setText("${no}")
         }
+
+        background.setOnClickListener{
+
+        }
     }
 }
