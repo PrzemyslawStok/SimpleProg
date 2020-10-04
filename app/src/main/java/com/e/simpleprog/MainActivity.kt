@@ -13,10 +13,11 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        text_hello.setText("Nowy tekst")
+        text_hello.setText(""+no)
 
         button.setOnClickListener{
-            text_hello.setText("Kolejny tekst")
+            no++
+            text_hello.setText("${no}")
         }
     }
 }
