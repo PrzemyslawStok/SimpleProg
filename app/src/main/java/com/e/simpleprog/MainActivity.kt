@@ -11,5 +11,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         text_hello.setText("Nowy tekst")
+
+        button.setOnClickListener{
+            text_hello.setText("Kolejny tekst")
+        }
     }
 }
