@@ -7,22 +7,25 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     var no = 0
+    var startTime: Long = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
 
-        text_hello.setText(""+no)
+        text_hello.setText("${no}")
 
-        button.setOnClickListener{
+        buttonStart.setOnClickListener{
             no=0
+            startTime = System.currentTimeMillis()
             text_hello.setText("${no}")
         }
 
         background.setOnClickListener{
             no++
-            text_hello.setText("${no}")
+            val time = System.currentTimeMillis()-startTime;
+            text_hello.setText("${no} ${time}ms")
         }
     }
 }
