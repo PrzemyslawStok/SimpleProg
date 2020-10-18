@@ -28,12 +28,19 @@ class MainActivity : AppCompatActivity() {
             text_hello.setText("${no} ${time}ms")
 
             if(no==20){
-                textGameResult.setText("Zakończono grę")
+                no = 0
+               gameResult(time)
             }
         }
     }
 
-    fun gameResult(){
+    fun gameResult(time: Long){
 
+        if(time<2000) {
+            textGameResult.setText("Rewelecyjnie!!! Twój wynik to ${time}ms")
+            return
+        }
+
+        textGameResult.setText("Mogłoby być lepiej. Twój wynik to ${time}ms")
     }
 }
