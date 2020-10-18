@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         text_hello.setText("${no}")
 
-        buttonStart.setOnClickListener{
-            no=0
+        buttonStart.setOnClickListener {
+            no = 0
             startTime = System.currentTimeMillis()
             text_hello.setText("${no}")
         }
@@ -26,6 +26,14 @@ class MainActivity : AppCompatActivity() {
             no++
             val time = System.currentTimeMillis()-startTime;
             text_hello.setText("${no} ${time}ms")
+
+            if(no==20){
+                textGameResult.setText("Zakończono grę")
+            }
         }
+    }
+
+    fun gameResult(){
+
     }
 }
